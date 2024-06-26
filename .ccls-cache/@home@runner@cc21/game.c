@@ -22,6 +22,7 @@ t_game *game_init() {
   ret->broker = 0;
   ret->bet = 0;
   ret->player = player_init();
+  ret->player->score = 15;
   return ret;
 }
 
