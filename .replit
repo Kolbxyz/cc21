@@ -1,0 +1,12 @@
+modules = ["c-clang14"]
+compile = ["make", "-s"]
+run = "./D21"
+hidden = ["main", "main-debug", "**/*.o", "**/*.d", ".ccls-cache"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+build = ["sh", "-c", "make && ./D21"]
+run = ["sh", "-c", "ls"]
+
